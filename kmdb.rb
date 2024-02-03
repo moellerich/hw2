@@ -92,22 +92,27 @@ studio = Studio.new
 studio["name"] = "Warner Bros."
 studio.save
 
+warner_bros = Studio.find_by({"name" => "Warner Bros."})
+
 movie = Movie.new
 movie["title"] = "Batman Begins"
 movie["year_released"] = "2005"
 movie["rated"] = "PG-13"
+movie["studio_id"] = warner_bros["id"]
 movie.save
 
 movie = Movie.new
 movie["title"] = "The Dark Knight"
 movie["year_released"] = "2008"
 movie["rated"] = "PG-13"
+movie["studio_id"] = warner_bros["id"]
 movie.save
 
 movie = Movie.new
 movie["title"] = "The Dark Knight Rises"
 movie["year_released"] = "2012"
 movie["rated"] = "PG-13"
+movie["studio_id"] = warner_bros["id"]
 movie.save
 
 actor = Actor.new
@@ -199,6 +204,8 @@ puts "Movies: #{Movie.all.count}"
 puts "Actors: #{Actor.all.count}"
 puts "Roles: #{Role.all.count}"
 
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -207,7 +214,8 @@ puts ""
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
-
+all_movies = Movie.all
+puts all_movies.inspect
 
 # Prints a header for the cast output
 puts ""
