@@ -88,6 +88,117 @@
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
+studio = Studio.new
+studio["name"] = "Warner Bros."
+studio.save
+
+movie = Movie.new
+movie["title"] = "Batman Begins"
+movie["year_released"] = "2005"
+movie["rated"] = "PG-13"
+movie.save
+
+movie = Movie.new
+movie["title"] = "The Dark Knight"
+movie["year_released"] = "2008"
+movie["rated"] = "PG-13"
+movie.save
+
+movie = Movie.new
+movie["title"] = "The Dark Knight Rises"
+movie["year_released"] = "2012"
+movie["rated"] = "PG-13"
+movie.save
+
+actor = Actor.new
+actor["name"] = "Christian Bale"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Michael Caine"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Liam Neeson"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Katie Holmes"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Gary Oldman"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Heath Ledger"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Aaron Eckhart"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Maggie Gyllenhaal"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Tom Hardy"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Joseph Gordon-Levitt"
+actor.save
+
+actor = Actor.new
+actor["name"] = "Anne Hathaway"
+actor.save
+
+role = Role.new
+role["character_name"] = "Bruce Wayne"
+role.save
+
+role = Role.new
+role["character_name"] = "Alfred"
+role.save
+
+role = Role.new
+role["character_name"] = "Ra's Al Ghul"
+role.save
+
+role = Role.new
+role["character_name"] = "Rachel Dawes"
+role.save
+
+role = Role.new
+role["character_name"] = "Commissioner Gordon"
+role.save
+
+role = Role.new
+role["character_name"] = "Joker"
+role.save
+
+role = Role.new
+role["character_name"] = "Harvey Dent"
+role.save
+
+role = Role.new
+role["character_name"] = "Bane"
+role.save
+
+role = Role.new
+role["character_name"] = "John Blake"
+role.save
+
+role = Role.new
+role["character_name"] = "Selina Kyle"
+role.save
+
+puts "Studios: #{Studio.all.count}"
+puts "Movies: #{Movie.all.count}"
+puts "Actors: #{Actor.all.count}"
+puts "Roles: #{Role.all.count}"
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -95,6 +206,8 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+
+
 
 # Prints a header for the cast output
 puts ""
