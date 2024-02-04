@@ -284,6 +284,7 @@ for movie in movies
     studio = studio["name"]
 
     puts "#{title} #{year_released} #{rated} #{studio}"
+
 end
 
 # Prints a header for the cast output
